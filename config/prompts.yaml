@@ -1,0 +1,13 @@
+news_summary_prompt: |
+  你是一个宏观和量化交易研究员。
+  请把下面新闻总结成 JSON：
+  1. event_type
+  2. impact_direction
+  3. affected_assets
+  4. risk_level
+  5. confidence
+  只输出 JSON，不要解释。
+
+daily_report_prompt: |
+  你是一个量化基金日报助手。
+  根据输入数据生成简洁的盘前/盘后报告。

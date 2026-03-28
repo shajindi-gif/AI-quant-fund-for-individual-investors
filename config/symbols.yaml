@@ -1,0 +1,25 @@
+etfs:
+  - name: hs300_etf
+    symbol: "510300"
+    category: "equity"
+  - name: zz500_etf
+    symbol: "510500"
+    category: "equity"
+  - name: dividend_etf
+    symbol: "515180"
+    category: "equity"
+  - name: gold_etf
+    symbol: "518880"
+    category: "defensive"
+  - name: securities_etf
+    symbol: "512880"
+    category: "equity"
+  - name: tech_etf
+    symbol: "515000"
+    category: "equity"
+  - name: hstech_etf
+    symbol: "513180"
+    category: "equity"
+  - name: bond_etf
+    symbol: "511010"
+    category: "defensive"

@@ -1,0 +1,8 @@
+pandas
+numpy
+pyyaml
+duckdb
+pyarrow
+requests
+matplotlib
+openai

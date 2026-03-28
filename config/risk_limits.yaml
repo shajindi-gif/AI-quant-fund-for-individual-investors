@@ -1,0 +1,14 @@
+portfolio:
+  max_total_equity_weight: 0.60
+  max_single_position_weight: 0.20
+  defensive_min_weight: 0.00
+  cash_min_weight: 0.10
+
+risk:
+  daily_loss_limit: 0.015
+  drawdown_warning: 0.05
+  drawdown_protection: 0.08
+  high_vol_threshold: 0.025
+
+execution:
+  rebalance_frequency: "daily"
