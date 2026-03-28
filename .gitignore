@@ -19,3 +19,7 @@ build/
 # Secrets & local
 .env
 *.local.yaml
+
+# Regenerated locally (see download_etf_data.py / main.py)
+data/raw/
+reports/
