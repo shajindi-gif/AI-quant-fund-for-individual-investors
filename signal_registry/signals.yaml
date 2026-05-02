@@ -1,0 +1,14 @@
+signals:
+  trend_score:
+    description: 趋势强度评分
+    output: score_0_100
+    frequency: daily
+  volume_confirm:
+    description: 成交确认
+    output: true_false
+    frequency: daily
+  risk_score:
+    description: 风险评分
+    output: score_0_100
+    frequency: daily
+

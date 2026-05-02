@@ -15,40 +15,29 @@ build/
 .idea/
 .vscode/
 .DS_Store
-
 # Secrets & local
 .env
 *.local.yaml
-
 # Regenerated locally (see download_etf_data.py / main.py)
 data/raw/
 reports/
-
 # local merge buffers
 _incoming/
-
 # infra runtime volumes
 infra/**/volumes/
 infra/**/qdrant_storage/
-
 # runtime files
 logs/
-reports/
 *.log
-
 # python
-__pycache__/
-.venv/
-venv/
 .pytest_cache/
 .mypy_cache/
-
 # node
 node_modules/
 .next/
-dist/
-build/
-
 # secrets
-.env
 .env.local
+# merge buffers
+# runtime/cache
+# data/runtime volumes
+data/cache/
