@@ -1,0 +1,27 @@
+[project]
+name = "leihuo-portfolio"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.135.1",
+    "httpx>=0.28.1",
+    "ipykernel>=7.2.0",
+    "jupyterlab>=4.5.5",
+    "matplotlib>=3.10.8",
+    "mlflow>=1.27.0",
+    "numpy>=2.4.2",
+    "openai>=2.24.0",
+    "pandas>=3.0.1",
+    "polars>=1.38.1",
+    "pyarrow>=23.0.1",
+    "pydantic>=2.12.5",
+    "python-dotenv>=1.2.2",
+    "qdrant-client>=1.17.0",
+    "rich>=14.3.3",
+    "scikit-learn>=1.8.0",
+    "scipy>=1.17.1",
+    "sentence-transformers>=5.2.3",
+    "uvicorn[standard]>=0.41.0",
+]

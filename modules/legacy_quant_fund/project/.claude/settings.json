@@ -1,0 +1,60 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python scripts/*.py:*)",
+      "Bash(python3 scripts/*.py:*)",
+      "Bash(ls:*)",
+      "Bash(cat data/*:*)",
+      "Bash(cat logs/*:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(date:*)",
+      "Bash(mkdir -p logs/*:*)",
+      "Read(./**)",
+      "Write(logs/decisions/**)",
+      "Write(logs/reports/**)",
+      "Write(data/signals.csv)",
+      "Write(data/risk_report.json)",
+      "Write(data/proposed_trades.json)",
+      "Write(data/macro/**)"
+    ],
+    "ask": [
+      "Write(data/positions.json)",
+      "Write(data/etf_universe.csv)",
+      "Bash(rm:*)",
+      "Bash(git push:*)"
+    ],
+    "deny": [
+      "Read(/etc/**)",
+      "Read(~/.ssh/**)",
+      "Bash(curl:*)",
+      "Bash(wget:*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/post-tool-use.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/stop-reminder.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

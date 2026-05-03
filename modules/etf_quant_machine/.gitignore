@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+reports/*.png
+reports/*.xlsx
+reports/*.csv
+logs/*.log

@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.python-version
+
+# Data (do not commit market data, only commit code)
+project/data/etf_prices/
+project/data/_macro.json
+project/data/_snapshot.csv
+project/data/signals.csv
+project/data/risk_report.json
+project/data/proposed_trades.json
+project/data/macro/
+**/etf_prices/
+
+# Logs (sensitive: contains your real positions and trades)
+project/logs/decisions/
+project/logs/reports/
+!project/logs/decisions/.gitkeep
+!project/logs/reports/.gitkeep
+
+# Personal positions (DO NOT commit your real holdings)
+project/data/positions.json
+!project/data/positions.json.template
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+project/notebooks/*.ipynb
+
+# Backup
+*.bak
+*.bak.*
+
+# Build artifacts
+project/data/backtest_report.html
+*.log

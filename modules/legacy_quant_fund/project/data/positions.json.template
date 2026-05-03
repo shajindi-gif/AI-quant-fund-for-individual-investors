@@ -1,0 +1,45 @@
+{
+  "fund_name": "Sadie Personal Quant Fund",
+  "inception_date": "2026-04-27",
+  "base_currency": "CNY",
+  "total_capital": 200000,
+  "benchmark": {
+    "type": "60_40",
+    "components": [
+      {"code": "510300", "weight": 0.60},
+      {"code": "511260", "weight": 0.40}
+    ],
+    "rebalance_freq": "monthly"
+  },
+  "current_positions": [
+    {
+      "code": "",
+      "name": "",
+      "shares": 0,
+      "avg_cost": 0,
+      "purchase_date": "",
+      "category": "",
+      "notes": "示例：填入实际持仓后删除该项"
+    }
+  ],
+  "cash": 200000,
+  "last_rebalance_date": null,
+  "next_rebalance_date": null,
+  "risk_status": "🟢",
+  "drawdown_from_high": 0,
+  "high_watermark": 200000,
+  "constraints": {
+    "single_etf_max_weight": 0.30,
+    "single_sector_max_weight": 0.25,
+    "min_cash_ratio": 0.05,
+    "max_overseas_ratio": 0.20,
+    "min_rebalance_interval_days": 28,
+    "max_turnover_per_rebalance": 0.50,
+    "max_holdings": 8,
+    "min_holdings": 3,
+    "warning_drawdown": 0.08,
+    "force_reduce_drawdown": 0.12,
+    "force_defensive_drawdown": 0.15,
+    "stop_loss_drawdown": 0.20
+  }
+}

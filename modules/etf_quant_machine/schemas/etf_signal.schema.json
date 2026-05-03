@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "symbol": {"type": "string"},
+    "name": {"type": "string"},
+    "trend_score": {"type": "number"},
+    "volume_score": {"type": "number"},
+    "risk_score": {"type": "number"},
+    "overnight_score": {"type": "number"},
+    "crowding_level": {"type": "string"},
+    "decision": {"type": "string"},
+    "reason": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  },
+  "required": ["symbol", "trend_score", "risk_score", "decision"]
+}

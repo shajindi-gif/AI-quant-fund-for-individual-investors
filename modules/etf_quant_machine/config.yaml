@@ -1,0 +1,59 @@
+project:
+  name: etf_quant_machine
+  base_currency: CNY
+  initial_capital: 200000
+  commission_rate: 0.0003
+  slippage_rate: 0.0005
+  max_positions: 8
+  rebalance_mode: daily
+
+risk:
+  per_position_max_weight: 0.18
+  total_exposure_cap: 0.95
+  daily_turnover_cap: 0.35
+  atr_stop_multiple: 2.2
+  trailing_stop_multiple: 2.8
+  volatility_target: 0.16
+  max_portfolio_drawdown: 0.12
+  cash_buffer: 0.05
+
+signals:
+  lookback_momentum_days: [5, 20, 60]
+  mean_reversion_days: 3
+  volume_window: 20
+  breakout_window: 55
+  rsi_window: 14
+  adx_window: 14
+  timing_threshold_buy: 0.58
+  timing_threshold_sell: 0.42
+  news_score_weight: 0.18
+  trend_weight: 0.30
+  momentum_weight: 0.22
+  mean_reversion_weight: 0.10
+  breakout_weight: 0.10
+  relative_strength_weight: 0.10
+
+data:
+  raw_data_dir: data/raw
+  processed_data_dir: data/processed
+  accepted_extensions: [csv]
+  required_columns: [date, open, high, low, close, volume]
+
+universe:
+  tickers:
+    - 510300
+    - 510500
+    - 159915
+    - 588000
+    - 512100
+    - 512480
+    - 512660
+    - 159928
+    - 159870
+    - 159949
+    - 513100
+    - 513500
+
+manual_macro:
+  regime_score_range: [-2, -1, 0, 1, 2]
+  sentiment_score_range: [-2, -1, 0, 1, 2]

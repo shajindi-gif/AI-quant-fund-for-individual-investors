@@ -1,0 +1,38 @@
+project:
+  path: "/Users/shajindi/Projects/etf_quant_machine"
+  kind: "finance_signal"
+  description: "ETF信号评分与解释机器"
+  created_at: "20260429_174548"
+
+rules:
+  do_not_delete:
+    - .env
+    - .venv
+    - reports
+    - logs
+    - approvals
+    - config
+    - data
+  require_human_approval:
+    - live_trading
+    - auto_order
+    - delete_files
+    - move_project
+    - overwrite_env
+    - git_push
+    - background_service
+  preferred_outputs:
+    - reports
+    - logs
+    - evals
+    - schemas
+
+agent_workflow:
+  - read_README_FOR_AGENTS
+  - inspect_project
+  - propose_plan
+  - modify_minimal_files
+  - run_tests_or_diagnostics
+  - update_CHANGELOG
+  - summarize_result
+
