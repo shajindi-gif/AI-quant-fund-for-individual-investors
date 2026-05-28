@@ -17,12 +17,35 @@
 - 接入自动调仓
 - 接入回测模块
 
-## 运行方式
+## 环境准备（macOS / Homebrew Python）
+
+系统 Python 受 PEP 668 保护，**不要**全局 `pip install`。使用项目虚拟环境：
 
 ```bash
-pip install -r requirements.txt
+# 一键安装依赖（含 akshare）
+bash scripts/setup.sh
+source .venv/bin/activate
+
+# 验证
+python -c "import akshare as ak; print(ak.__version__)"
+
+# 拉取 config/symbols.yaml 中的 ETF 日线 → data/raw/
+bash scripts/download.sh
+# 或: python download_etf_data.py
+```
+
+若 AkShare 报 `ProxyError` 或连不上 `push2his.eastmoney.com`，请用 `scripts/download.sh`（会临时取消代理环境变量），或在终端关闭 VPN/系统代理后重试。
+
+Cursor / VS Code：打开本项目后选择解释器 **`.venv/bin/python`**（本地已生成 `.venv` 时）。
+
+## 运行策略与日报
+
+```bash
+source .venv/bin/activate
 python main.py
 ```
+
+`data/raw/` 与 `reports/` 在本地生成，已写入 `.gitignore`，不提交 GitHub；换机器后重新 `bash scripts/download.sh` 即可。
 
 ## CSV 数据格式
 
